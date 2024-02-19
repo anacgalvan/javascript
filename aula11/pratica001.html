@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sou estrangeiro ou não?</title>
+    <style>
+        body {
+            background-color: rgb(117, 74, 74);
+            color: rgb(255, 247, 235);
+            text-align: center;
+        }
+        h1 {
+            font: bold 25pt Georgia;
+        }
+        h2 {
+            font: normal 15pt Georgia;
+        }
+        p {
+            font: normal 10pt Arial;
+        }
+        div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eu sou estrangeiro?</h1>
+    <h2>Descubra se você é estrangeiro ou brasileiro!</h2>
+    <p>P.S.: lembre de escrever corretamente o nome do país.</p>
+    <input type="text" name="país" id="país">
+    <input type="button" value="Verificar" onclick="Verificar()">
+    <div id="res"></div>
+    <script>
+        function Verificar() {
+            var país = document.querySelector(`input#país`).value
+            var res = document.querySelector(`div#res`) 
+            
+            if (país === `Brasil`) {
+                res.innerHTML = `<p>Você é <strong>brasileiro</strong>.</p>`
+            } else {
+            res.innerHTML = `<p>Você <strong>não</strong> é Brasileiro, você é <strong>Estrangeiro</strong>.</p>`
+         }
+        }
+    </script>
+</body>
+</html>
